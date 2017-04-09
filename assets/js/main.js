@@ -17,7 +17,10 @@
       callback: {
           onClick: function(event, treeId, treeNode) {
               $(".content").find("[data-id='" + treeNode.id + "']").each(function() {
-                  $(window).scrollTop($(this).offset().top)
+                  var top = $(this).offset().top - 60;
+                  if (top > 0) {
+                      $(window).scrollTop($(this).offset().top)
+                  }
               })
           }
       }
