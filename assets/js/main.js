@@ -19,7 +19,7 @@
               $(".content").find("[data-id='" + treeNode.id + "']").each(function() {
                   $(window).animate({
                       scrollTop: $(this).offset().top
-                  }, slow)
+                  }, "slow");
               })
           }
       }
