@@ -16,13 +16,10 @@
       },
       callback: {
           onClick: function(event, treeId, treeNode) {
-              // var zTree = $.fn.zTree.getZTreeObj(treeId);
-              // if (treeNode.isParent) {
-              //     zTree.expandNode(treeNode);
-              // }
-
               $(".content").find("[data-id='" + treeNode.id + "']").each(function() {
-                  $(window).scrollTop($(this).offset().top)
+                  $(window).animate({
+                      scrollTop: $(this).offset().top
+                  }, slow)
               })
           }
       }
