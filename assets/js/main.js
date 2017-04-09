@@ -17,9 +17,7 @@
       callback: {
           onClick: function(event, treeId, treeNode) {
               $(".content").find("[data-id='" + treeNode.id + "']").each(function() {
-                  $(window).animate({
-                      scrollTop: $(this).offset().top
-                  }, "slow");
+                  $(window).scrollTop($(this).offset().top)
               })
           }
       }
@@ -52,7 +50,8 @@
               zNodes.push({
                   id: id,
                   pId: pId,
-                  name: $(this).text()
+                  name: $(this).text(),
+                  open: true
               });
 
               // 保存 id 到标签，用于跳转

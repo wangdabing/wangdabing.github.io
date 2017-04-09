@@ -78,8 +78,13 @@ h1, h2, h3, h4 {
   border: 1px solid #4c964d;
   color: #FFF; }
 
+/* 新增 */
+.container {
+  margin-top: 50px;
+}
+
 .ztree {
-  position: absolute;
+  position: fixed;
   top: 60px;
   left: 0;
 }
