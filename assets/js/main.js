@@ -19,7 +19,7 @@
               $(".content").find("[data-id='" + treeNode.id + "']").each(function() {
                   var top = $(this).offset().top - 60;
                   if (top > 0) {
-                      $(window).scrollTop($(this).offset().top)
+                      $(window).scrollTop(top)
                   }
               })
           }
